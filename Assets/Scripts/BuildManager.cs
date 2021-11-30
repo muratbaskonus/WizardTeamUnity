@@ -27,6 +27,16 @@ public class BuildManager : MonoBehaviour
 
 	public GameObject GetTurretToBuild()
     {
-		return turretToBuild;
-    }
+		if(PlayerStats.money >= 10)
+        {
+			PlayerStats.money -= 10;
+			return turretToBuild;
+		}
+        else
+        {
+			return null;
+        }
+		 
+	}
 }
+
