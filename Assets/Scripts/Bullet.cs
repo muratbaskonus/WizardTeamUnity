@@ -46,6 +46,7 @@ public class Bullet : MonoBehaviour
 		Debug.Log(gameObject);
 		Destroy(target.gameObject);
 		PlayerStats.money++;
+		PlayerStats.score++;
 	}
 
 	
