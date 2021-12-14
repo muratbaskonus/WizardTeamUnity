@@ -27,15 +27,10 @@ public class BuildManager : MonoBehaviour
 
 	public GameObject GetTurretToBuild()
     {
-		if(PlayerStats.money >= 10)
-        {
+		
 			PlayerStats.money -= 10;
 			return turretToBuild;
-		}
-        else
-        {
-			return null;
-        }
+       
 		 
 	}
 }
