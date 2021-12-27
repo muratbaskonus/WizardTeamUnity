@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
     }
     public void ExitButton()
     {
+        leaderBoardUI.SetActive(false);
+        gameOverUI.SetActive(false);
         SceneManager.LoadScene("StartMenu");
     }
     public void GetLeaderBoardButton()
