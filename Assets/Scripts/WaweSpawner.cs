@@ -5,7 +5,7 @@ public class WaweSpawner : MonoBehaviour
 {
     public Transform enemyPrefab;
     public Transform spawnPoint;
-    public float timeBetweenWawes = 5f;
+    public float timeBetweenWawes = 2f;
     private float countdown = 3f;
     private int waveIndex = 0;
 
@@ -16,7 +16,7 @@ public class WaweSpawner : MonoBehaviour
         if(countdown <= 0f && PlayerStats.lives > 0)
         {
             StartCoroutine(SpawnWawe());
-            countdown = timeBetweenWawes;
+            countdown = waveIndex + 2;
         }
         if(countdown >= 0)
         {

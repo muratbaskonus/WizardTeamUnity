@@ -33,6 +33,8 @@ public class Enemy1 : MonoBehaviour
         }  
         wavepointIndex ++;
         target = Waypoints.points[wavepointIndex];
+        Vector3 to = new Vector3(0, 270, 0);
+        transform.Rotate(to);
     }
     void EndPath()
     {

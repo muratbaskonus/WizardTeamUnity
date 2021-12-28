@@ -5,6 +5,8 @@ public class Turret : MonoBehaviour
 {
 
 	private Transform target;
+	[SerializeField] private AudioSource soundSource;
+	[SerializeField] private AudioClip shootSound;
 
 	[Header("General")]
 
@@ -13,7 +15,7 @@ public class Turret : MonoBehaviour
 	[Header("Use Bullets (default)")]
 	public GameObject bulletPrefab;
 	public float fireRate = 1f;
-	private float fireCountdown = 0f;
+	private float fireCountdown = 0.01f;
 
 	[Header("Use Laser")]
 	public bool useLaser = false;
@@ -78,6 +80,7 @@ public class Turret : MonoBehaviour
 		{
 				Shoot();
 				fireCountdown = 1f / fireRate;
+				soundSource.PlayOneShot(shootSound);
 		}
 
 		fireCountdown -= Time.deltaTime;

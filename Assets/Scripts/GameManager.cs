@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverUI;
     public GameObject leaderBoardUI;
 
-
     // Update is called once per frame
     void Update()
     {
